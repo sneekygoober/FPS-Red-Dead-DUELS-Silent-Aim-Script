@@ -19,11 +19,6 @@ local UIS: UserInputService = cloneref(game:GetService("UserInputService"));
 local plr = Players.LocalPlayer;
 local cam = workspace.CurrentCamera;
 
-local mouse: Mouse?;
-if not UIS.TouchEnabled and UIS.MouseEnabled and UIS.KeyboardEnabled then
-    mouse = plr:GetMouse();
-end;
-
 local s, gcm = pcall(require, RS.ModuleScript.GameCommonMethod);
 if not s then
     return warn(executor .. " returned an error while trying to require RS.ModuleScript.GameCommonMethod:\n" .. gcm);
